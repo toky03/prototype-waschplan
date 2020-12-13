@@ -1,14 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import { Counter } from "./features/counter/Counter";
+import "./App.css";
+import FullCalendar from "@fullcalendar/react";
+import timeGridPlugin from "@fullcalendar/timegrid";
 
 function App() {
   return (
     <div className="App">
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
+
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -29,6 +33,10 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
+          <FullCalendar
+        plugins={[timeGridPlugin]}
+        initialView="timeGridWeek"
+      ></FullCalendar>
             Redux
           </a>
           <span>, </span>
