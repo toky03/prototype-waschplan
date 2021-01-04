@@ -1,6 +1,8 @@
+import {ERFASSE_TERMIN} from '../actions/index';
+
 const termine = (state = [], action: any) => {
     switch (action.type) {
-        case 'ERFASSE_TERMIN':
+        case ERFASSE_TERMIN:
             return [
                 ...state,
                 {
